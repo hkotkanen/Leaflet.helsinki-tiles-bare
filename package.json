@@ -1,10 +1,10 @@
 {
   "name": "leaflet-helsinki-tiles",
   "version": "1.0.0",
-  "description": "Easily initialize Leaflet (1.0) maps with background tiles from the City of Helsinki",
+  "description": "Convenience functions for creating Helsinki specific Leaflet tile layers, without bundling Leaflet.",
   "main": "entry.js",
   "scripts": {
-    "build": "webpack && uglifyjs ./dist/Leaflet.helsinki-tiles.js -c -m -o ./dist/Leaflet.helsinki-tiles.min.js --source-map ./dist/Leaflet.helsinki-tiles.min.js.map"
+    "build": "webpack && uglifyjs ./dist/Leaflet.helsinki-tiles-bare.js -c -m -o ./dist/Leaflet.helsinki-tiles-bare.min.js --source-map ./dist/Leaflet.helsinki-tiles-bare.min.js.map"
   },
   "repository": {
     "type": "git",
@@ -13,11 +13,10 @@
   "author": "Henri Kotkanen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hkotkanen/Leaflet.helsinki-tiles/issues"
+    "url": "https://github.com/hkotkanen/Leaflet.helsinki-tiles-bare/issues"
   },
-  "homepage": "https://github.com/hkotkanen/Leaflet.helsinki-tiles#readme",
+  "homepage": "https://github.com/hkotkanen/Leaflet.helsinki-tiles-bare#readme",
   "dependencies": {
-    "leaflet": "git://github.com/Leaflet/Leaflet.git#v1.0.1",
     "proj4": "^2.3.14",
     "proj4leaflet": "git://github.com/kartena/Proj4Leaflet.git#leaflet-proj-refactor"
   },

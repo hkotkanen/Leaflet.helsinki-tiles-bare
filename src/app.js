@@ -3,15 +3,7 @@
 - https://github.com/City-of-Helsinki/democracy-preview
 */
 
-require("leaflet_css");
-// requiring only the leaflet.css tries to import these images, which webpack struggles with.
-// ...we solve it by requiring them explicitly (causes them to be loaded with file-loader) here.
-// source: http://stackoverflow.com/questions/33732066/webpack-requirenode-modules-leaflet-leaflet-css
-require("leaflet_marker");
-require("leaflet_marker_2x");
-require("leaflet_marker_shadow");
-
-require("leaflet");
+// require("leaflet");
 require("proj4");
 require("proj4leaflet");
 
@@ -133,8 +125,10 @@ function makeMap(elem, options) {
     return map;
 }
 
-L.CRS.Helsinki = getCRS;
-L.map.Helsinki = makeMap;
-L.tileLayer.Helsinki = createTileLayer;
+// module.exports = L;
 
-module.exports = L;
+module.exports = {
+    getCRS: getCRS,
+    makeMap: makeMap,
+    getTileLayer: createTileLayer
+}
